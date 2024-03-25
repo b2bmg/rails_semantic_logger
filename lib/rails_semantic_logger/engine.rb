@@ -101,7 +101,7 @@ module RailsSemanticLogger
 
       # Replace the Mongo Loggers
       Mongoid.logger       = SemanticLogger[Mongoid] if defined?(Mongoid)
-      Moped.logger         = SemanticLogger[Moped] if defined?(Moped)
+      # Moped.logger         = SemanticLogger[Moped] if defined?(Moped)
       Mongo::Logger.logger = SemanticLogger[Mongo] if defined?(Mongo::Logger)
 
       # Replace the Resque Logger
